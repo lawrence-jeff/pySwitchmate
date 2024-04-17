@@ -28,7 +28,7 @@ class Switchmate:
         # Disconnect before reconnecting
         if self._device is not None:
             await self._disconnect()
-        _LOGGER.debug("Connecting")
+        _LOGGER.debug("ConnectingJ")
         self._device = bleak.BleakClient(self._mac)
         try:
             async with CONNECT_LOCK:
@@ -42,7 +42,7 @@ class Switchmate:
                     )
         except (bleak.BleakError, asyncio.exceptions.TimeoutError):
             _LOGGER.error(
-                "Failed to connect to Switchmate",
+                "JFailed to connect to Switchmate",
                 exc_info=logging.DEBUG >= _LOGGER.root.level,
             )
             return False
@@ -55,7 +55,7 @@ class Switchmate:
                 await self._device.disconnect()
         except (bleak.BleakError, asyncio.exceptions.TimeoutError):
             _LOGGER.error(
-                "Failed to disconnect from Switchmate",
+                "JFailed to disconnect from Switchmate",
                 exc_info=logging.DEBUG >= _LOGGER.root.level,
             )
             return False
@@ -80,7 +80,7 @@ class Switchmate:
             if retry:
                 return await self._communicate(key, False)
             _LOGGER.error(
-                "Cannot communicate with Switchmate",
+                "JCannot communicate with Switchmate",
                 exc_info=logging.DEBUG >= _LOGGER.root.level,
             )
             self.available = False
