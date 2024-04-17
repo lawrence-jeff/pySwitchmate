@@ -13,7 +13,7 @@ OFF_KEY = b"\x00"
 _LOGGER = logging.getLogger(__name__)
 
 
-class Switchmate:
+class Switchmate2:
     """Representation of a Switchmate."""
 
     def __init__(self, mac, flip_on_off=False) -> None:
