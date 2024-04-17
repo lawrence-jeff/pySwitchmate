@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="PySwitchmate",
-    packages=["switchmate"],
+    packages=["switchmate2"],
     install_requires=["bleak"],
     version="1.0",
     description="A library to communicate with Switchmate",
