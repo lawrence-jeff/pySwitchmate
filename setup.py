@@ -7,7 +7,7 @@ setup(
     version="0.5.1",
     description="A library to communicate with Switchmate",
     author="Daniel Hjelseth Hoyer",
-    url="https://github.com/Danielhiversen/pySwitchmate/",
+    url="https://github.com/lawrence-jeff/pySwitchmate/",
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Environment :: Other Environment",
